@@ -1,0 +1,92 @@
+public class PalabraTransformar {
+
+     
+    private String palabra; 
+    
+     public String getPalabra() {
+        return palabra;
+    }
+
+    public void setPalabra(String palabra) {
+        this.palabra = palabra;
+    }
+    
+    
+    public String alfabetoHacker(String letraTransformar){
+                
+        switch(letraTransformar){
+            
+            case " " -> letraTransformar= "@";
+            
+            case "A" -> letraTransformar= "4";
+                       
+            case "B" -> letraTransformar= "I3";
+            
+            case "C" -> letraTransformar= "[";
+                      
+            case "D" -> letraTransformar= ")";
+            
+            case "E" -> letraTransformar= "3";
+            
+            case "F" -> letraTransformar= "|=";
+            
+            case "G" -> letraTransformar= "&";
+            
+            case "H" -> letraTransformar= "#";
+            
+            case "I" -> letraTransformar= "[]";
+            
+            case "J" -> letraTransformar= ",_|";
+            
+            case "K" -> letraTransformar= ">|";
+            
+            case "L" -> letraTransformar= "1";
+            
+            case "M" -> letraTransformar= "/\\/\\";
+            
+            case "N" -> letraTransformar= "´/";
+            
+            case "O" -> letraTransformar= "0";
+            
+            case "P" -> letraTransformar= "|*";
+            
+            case "Q" -> letraTransformar= "(_,)";
+            
+            case "R" -> letraTransformar= "I2";
+            
+            case "S" -> letraTransformar= "5";
+            
+            case "T" -> letraTransformar= "7";
+            
+            case "U" -> letraTransformar= "(_)";
+            
+            case "V" -> letraTransformar= "\\/";
+            
+            case "W" -> letraTransformar= "\\/\\/";
+            
+            case "X" -> letraTransformar= "><";
+            
+            case "Y" -> letraTransformar= "J";
+            
+            case "Z" -> letraTransformar= "2";
+            
+        }
+        return letraTransformar;
+        
+    }
+    
+    public void palabraTransformada(){
+        String palabraT="";
+                
+        for(int indice=0; indice<this.palabra.length();indice++){
+            palabraT = palabraT + alfabetoHacker(String.valueOf(this.palabra.toUpperCase().charAt(indice)));
+        }
+        
+        System.out.println("La nueva Palabra es: "+palabraT);
+    }
+    
+    
+    
+    
+    
+}
